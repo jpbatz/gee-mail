@@ -2,17 +2,18 @@
 
 	<head>
 		<script src="js/mail-generator.js">
-			//function populate() {
-				for(i=0; i<window.geemails.length; i++) {
-					document.getElementById("content").innerHTML = window.geemails[i];
-				}
-			//}
-			//populate();
+			function myFunction() {
+				alert("Hello");
+				//for(i=0; i<window.geemails.length; i++) {
+				//	document.getElementById("content").innerHTML = window.geemails[i];
+				//}
+			}
+
 		</script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
 	</head>
 
-	<body>
+	<body onload="myFunction()">
 
 		<div class="container" id="main">
 			<HR><CENTER><H1>GeeMail</H1></CENTER><HR>
