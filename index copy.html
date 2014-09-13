@@ -3,17 +3,14 @@
 <html>
 
 	<head>
-		<script>
-			function myFunction() {
+		<script src="js/mail-generator.js">
+			//function myFunction() {
 				
-				//test
 				//document.getElementById("contnt").innerHTML = "Page is loaded...";
-
 				//for(i=0; i<window.geemails.length; i++) {
-				//    document.getElementById("content").innerHTML = window.geemails;
+				//	document.getElementById("content").innerHTML = window.geemails[i];
 				//}
-				document.getElementById("content").innerHTML = "Hello!";
-			}
+			//}
 
 		</script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
@@ -27,10 +24,11 @@
 
 		<div class="container" id="content">
 			<HR><H2>InBox = </H2><HR>
-
+			<p id="inbox"></p>
 		</div>
-
-
+		<script>
+				document.getElementById("content").innerHTML = "Page is loaded...";
+		</script>
 	</body>
 
 </html>
