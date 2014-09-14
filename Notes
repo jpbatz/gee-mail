@@ -1,0 +1,26 @@
+<!-- Adding elements to page from HEAD section with createElement().  However, for text, use createTextNode(). -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="js/mail-generator.js"></script>
+  <script>
+     window.onload = function(){
+      var container = document.getElementById('container'); 
+      var newDiv = document.createElement('div');
+      var newText = document.createTextNode('Hello');
+
+      newDiv.appendChild(newText);
+      container.appendChild(newDiv);
+     }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <!--content goes here -->
+  </div>
+</body>
+</html>
+
