@@ -24,3 +24,32 @@
 </body>
 </html>
 
+// Display email count
+window.onload = function(){
+        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
+        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+        // console.log(window.geemails);
+        for(var i=0; i < window.geemails.length; i++){
+          var message = window.geemails[i];
+          console.log(message.subject);
+          console.log(message.body);
+          console.log(message.date);
+          console.log(message.sender);
+
+          //display messages in rows
+        }
+
+        function updateCount(){
+          var countSpan = document.getElementById('count');
+          countSpan.innerHTML = window.geemails.length;
+        }
+
+        updateCount();
+
+        setTimeout(function(){
+          var newMessage = getNewMessage();
+          window.geemails.push(newMessage);
+          updateCount();
+        }, 2000);
+
+      };
