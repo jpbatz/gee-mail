@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-
 <html>
-
-	<head>
+<head>
+<meta name="description" content="geemail test" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  		<<script src="js/mail-generator.js"></script>
 		<script>
-			function myFunction() {
-				
-				//test
-				//document.getElementById("contnt").innerHTML = "Page is loaded...";
+     		window.onload = function() {
 
-				//for(i=0; i<window.geemails.length; i++) {
-				//    document.getElementById("content").innerHTML = window.geemails;
-				//}
-				document.getElementById("content").innerHTML = "Hello!";
+     			var messages = window.geemails;
+
+                console.log("InBox = " + messages.length);
+                // console.log(messages);
+                console.log("*********************************");
+              
+				for(var i=0; i<messages.length; i++) {
+					var currMessage = messages.pop();
+                    console.log("Date: " + currMessage.date);
+                    console.log("Sender: " + currMessage.sender);
+                    console.log("Subject: " + currMessage.subject);
+                    console.log("Body: " + currMessage.body);
+                    console.log("*********************************");
+				}
+
+				//document.getElementById("content").innerHTML = messages;
+                //console.log(messages[0]);
+
 			}
 
 		</script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
-	</head>
 
-	<body onload="myFunction()">
-
+</head>
+<body>
 		<div class="container" id="main">
 			<HR><CENTER><H1>GeeMail</H1></CENTER><HR>
 		</div>
 
 		<div class="container" id="content">
-			<HR><H2>InBox = </H2><HR>
 
 		</div>
 
-
-	</body>
-
+</body>
+</html>
 </html>
