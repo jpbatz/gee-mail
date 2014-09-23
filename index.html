@@ -4,35 +4,34 @@
 <meta name="description" content="geemail test" />
   <meta charset="utf-8">
   <title>JS Bin</title>
-  		<<script src="js/mail-generator.js"></script>
-		<script>
-     		window.onload = function() {
+  
+  <script src="js/mail-generator.js"></script>
+  
+  <script>
+     window.onload = function() {
 
-     			var messages = window.geemails;
+        var allMessages = "InBox = " + window.geemails.length + "<br>";
 
-                console.log("InBox = " + messages.length);
-                // console.log(messages);
-                console.log("*********************************");
-              
-				for(var i=0; i<messages.length; i++) {
-					var currMessage = messages.pop();
-                    console.log("Date: " + currMessage.date);
-                    console.log("Sender: " + currMessage.sender);
-                    console.log("Subject: " + currMessage.subject);
-                    console.log("Body: " + currMessage.body);
-                    console.log("*********************************");
+        allMessages += "*********************************" + "<br>";
+				var currMessage = window.geemails;
+				for(var i=0; i<window.geemails.length; i++) {
+          allMessages += "<strong>Date: </strong>" + currMessage[i].date + "<br>";
+          allMessages += "<strong>Sender: </strong>" + currMessage[i].sender + "<br>";
+          allMessages += "<strong>Subject: </strong>" + currMessage[i].subject + "<br>";
+          allMessages += "<strong>Body: </strong>" + currMessage[i].body + "<br>";
+          allMessages += "*********************************" + "<br>";
 				}
 
-				//document.getElementById("content").innerHTML = messages;
-                //console.log(messages[0]);
-
+					document.getElementById("content").innerHTML = allMessages;
 			}
 
-		</script>
-		<link href="css/style.css" rel="stylesheet" media="screen">
+	</script>
+	
+	<link href="css/style.css" rel="stylesheet" media="screen">
 
 </head>
 <body>
+
 		<div class="container" id="main">
 			<HR><CENTER><H1>GeeMail</H1></CENTER><HR>
 		</div>
